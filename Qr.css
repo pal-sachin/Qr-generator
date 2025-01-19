@@ -1,0 +1,73 @@
+body {
+  background-color: brown;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+  width: 300px;
+  box-shadow: 0 4px 8px black;
+}
+
+.h1 {
+  font-weight: 100;
+  color: blue;
+}
+
+#qr-text {
+  width: 90%;
+  padding: 10px;
+  font-size: 16px;
+  background: white;
+  color: black;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background: purple;
+  color: white;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: darkviolet;
+}
+
+#img-box {
+  width: 150px; /* Match the QR code size from the API */
+  height: 150px; /* Match the QR code size */
+  border-radius: 10px;
+  display: none; /* Hide by default */
+  margin: 10px auto;
+  border: 1px solid black;
+  overflow: hidden; /* Prevent content from overflowing the box */
+  text-align: center; /* Center-align the image */
+}
+
+#img-box img {
+  width: 100%; /* Ensure the image scales to fit the container */
+  height: 100%; /* Ensure the image scales to fit the container */
+  object-fit: cover; /* Maintain aspect ratio and fill the box */
+}
+
+#img-box.show-img {
+  display: block; /* Reveal the image box */
+}
